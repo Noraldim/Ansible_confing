@@ -1,10 +1,15 @@
 ---
 - hosts: all
-  become: true   # (optional, but usually needed to install packages)
+  become: true 
   tasks:
     - name: Install tmux package
       apt:
         name: tmux
+        state: present
+        update_cache: yes
+    - name: Install git package
+      apt:
+        name : git
         state: present
         update_cache: yes
 
