@@ -12,4 +12,14 @@
         name : git
         state: present
         update_cache: yes
+    - name: install htop
+      apt:
+        name: htop
+        state: present
+        update_cache: yes
+    - name: install neofetch
+      apt:
+        name : neofetch
+        state: present
+        update_cache: yes
 
